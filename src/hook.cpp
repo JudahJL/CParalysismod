@@ -51,14 +51,14 @@ namespace ClassicParalysis
         {
             if (const auto spell = a_this->spell)
             {
-                static auto frostKeyword = RE::TESForm::LookupByEditorID<RE::BGSKeyword>("MagicDamageFrost");
+                static auto frostKeyword = RE::TESForm::LookupByEditorID<RE::BGSKeyword>("KS_AlduinTimeStop_Key");
 
                 if (spell->HasKeyword(frostKeyword))
                 {
-                    return true;
+                    return false;
                 }
             }
-            return false;
+            return true;
         }
 
         struct Start
