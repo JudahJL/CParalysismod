@@ -53,8 +53,7 @@ namespace ClassicParalysis
             {
                 static auto frostKeyword = RE::TESForm::LookupByEditorID<RE::BGSKeyword>("MagicDamageFrost");
 
-                const auto settings = Settings::GetSingleton();
-                if (spell->HasKeyword(frostKeyword) && !settings->frostSpells || !settings->paralysisSpells)
+                if (spell->HasKeyword(frostKeyword))
                 {
                     return true;
                 }
@@ -183,7 +182,6 @@ namespace ClassicParalysis
 
     void Install()
     {
-        Settings::GetSingleton()->Load();
 
         Effect::Install();
         Fixes::Install();
