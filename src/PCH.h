@@ -28,3 +28,4 @@ namespace Yen
 }
 
 #define OFFSET(se, ae) se
+#define RELOCATION_OFFSET(SE, AE) REL::VariantOffset(SE, AE, 0).offset()

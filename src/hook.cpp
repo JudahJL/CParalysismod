@@ -172,7 +172,7 @@ namespace ClassicParalysis
 
         void Install()
         {
-            REL::Relocation<std::uintptr_t> push_actor_away{RELOCATION_ID(38858, 39895), OFFSET(0x7E, 0x68)};
+            REL::Relocation<std::uintptr_t> push_actor_away{RELOCATION_ID(38858, 39895), RELOCATION_OFFSET(0x7E, 0x68)};
             Yen::write_thunk_call<CanBePushed>(push_actor_away.address());
 
             REL::Relocation<std::uintptr_t> start_kill_move{RELOCATION_ID(37659, 38613), 0x10};
