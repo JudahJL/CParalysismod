@@ -12,11 +12,11 @@ void MessageHandler(SKSE::MessagingInterface::Message* a_msg)
 	case SKSE::MessagingInterface::kDataLoaded:
 		break;
 	case SKSE::MessagingInterface::kPostLoad:
-		ClassicParalysis::Install();
 		break;
 	case SKSE::MessagingInterface::kPreLoadGame:
 		break;
 	case SKSE::MessagingInterface::kPostLoadGame:
+	    ClassicParalysis::Install();
         break;
 	case SKSE::MessagingInterface::kNewGame:
 		break;
