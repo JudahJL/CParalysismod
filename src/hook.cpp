@@ -51,7 +51,11 @@ namespace ClassicParalysis
         {
             if (const auto spell = a_this->spell)
             {
-                if (spell->HasKeywordString("KS_AlduinTimeStop_Key") || spell->HasKeywordString("HoY_SlowTimeKey") || spell->HasKeywordString("SlowTime_CoolKey") || spell->HasKeywordString("Player_SlowTime_Key"))
+                static auto AlduinStop = RE::TESForm::LookupByEditorID<RE::BGSKeyword>("KS_AlduinTimeStop_Key");
+                static auto DragonStop = RE::TESForm::LookupByEditorID<RE::BGSKeyword>("SlowTime_CoolKey");
+                static auto MiraakStop = RE::TESForm::LookupByEditorID<RE::BGSKeyword>("HoY_SlowTimeKey");
+                static auto PlayerStop = RE::TESForm::LookupByEditorID<RE::BGSKeyword>("Player_SlowTime_Key");
+                if (spell->HasKeyword(AlduinStop) || spell->HasKeyword(MiraakStop) || spell->HasKeyword(DragonStop) || spell->HasKeyword(PlayerStop))
                 {
                     return false;
                 }
