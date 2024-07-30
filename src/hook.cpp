@@ -51,9 +51,7 @@ namespace ClassicParalysis
         {
             if (const auto spell = a_this->spell)
             {
-                static auto frostKeyword = RE::TESForm::LookupByEditorID<RE::BGSKeyword>("KS_AlduinTimeStop_Key");
-
-                if (spell->HasKeyword(frostKeyword))
+                if (spell->HasKeywordString("KS_AlduinTimeStop_Key") || spell->HasKeywordString("HoY_SlowTimeKey") || spell->HasKeywordString("SlowTime_CoolKey") || spell->HasKeywordString("Player_SlowTime_Key"))
                 {
                     return false;
                 }
