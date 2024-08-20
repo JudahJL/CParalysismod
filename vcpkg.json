@@ -3,8 +3,12 @@
     "name": "hello-world",
     "version-string": "0.0.1",
     "dependencies": [
-        "commonlibsse-ng",
         "simpleini",
-        "nlohmann-json"
+        "nlohmann-json",
+        "spdlog",
+        "rapidcsv",
+        "fast-cpp-csv-parser",
+        "rsm-binary-io",
+        "clib-util"
     ]
 }
