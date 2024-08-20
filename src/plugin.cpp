@@ -9,17 +9,11 @@ void OnDataLoaded()
 void MessageHandler(SKSE::MessagingInterface::Message* a_msg)
 {
 	switch (a_msg->type) {
-	case SKSE::MessagingInterface::kDataLoaded:
-		break;
-	case SKSE::MessagingInterface::kPostLoad:
-		break;
-	case SKSE::MessagingInterface::kPreLoadGame:
-		break;
-	case SKSE::MessagingInterface::kPostLoadGame:
-	    ClassicParalysis::Install();
-        break;
-	case SKSE::MessagingInterface::kNewGame:
-		break;
+		case SKSE::MessagingInterface::kPostLoadGame:
+			ClassicParalysis::Install();
+			break;
+		default:
+			break;
 	}
 }
 
